@@ -1,0 +1,29 @@
+#flex-parent {
+  display: flex;
+  /* questo imposta la section come "CONTENITORE FLESSIBILE" e automaticamente anche i figli come "FLEX CHILDREN" (figli di un contenitore flessibile */
+  flex-wrap: wrap;
+  /* flex-wrap decide se mandare a capo gli elementi, una volta esaurito lo spazio di manovra, oppure se non volete permettergli di formare nuove file */
+  justify-content: space-between;
+  /* justify-content distribuisce gli elementi figli del contenitore flessibile lungo la "MAIN AXIS" (che nel nostro caso è l'asse orizzontale) */
+}
+
+#flex-parent article {
+  display: flex;
+  justify-content: space-around;
+  /* distribuiamo lo spazio del #flex-parent esattamente al 50% per i due article */
+  flex-grow: 1; /* ma mettere 1, 50 o 100000 non cambierebbe, l'importante è dare lo stesso valore a entrambi gli article*/
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  padding: 1em;
+  text-align: center;
+  background-color: darkgoldenrod;
+  color: white;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+#flex-parent div:nth-child(5) {
+  /* display: none; */
+}
