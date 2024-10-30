@@ -1,0 +1,32 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article.card {
+  display: flex;
+  flex-direction: column;
+  /* diamo una forma alla card */
+  max-width: 300px;
+  border: 1px solid gray;
+}
+
+.card .card-content {
+  text-align: center;
+  padding: 1em;
+  /* faccio toccare il fondo al card-content anche se la mia card è più "corta" delle altre */
+  flex-grow: 1;
+  /* a questo punto il card-content toccherà sempre il fondo! lo rendo flessibile a sua volta in modo da poter spingere il bottone alla fine della card */
+  display: flex;
+  flex-direction: column;
+  /* spingo il titolo in alto e il bottone in basso */
+  justify-content: space-between;
+}
+
+.card-content button {
+  width: 80%;
+  background-color: gray;
+  color: white;
+  padding: 0.5em 0;
+  margin: 0 auto;
+}
